@@ -24,13 +24,13 @@ let s:yellow = ['Yellow', 226]
 let s:red    = ['#b6403a', 160]
 let s:green  = ['#478226', 28]
 
-let s:default_fg = s:white
-let s:default_bg = s:black
-
 let s:italic    = 'italic'
 let s:bold      = 'bold'
 let s:underline = 'underline'
 let s:none      = 'NONE'
+
+let s:default_fg = s:white
+let s:default_bg = s:none
 
 let s:default_lst = []
 let s:default_str = ''
@@ -249,3 +249,7 @@ call s:hi('NeomakeError', s:yellow)
 call s:hi('NeomakeInfo', s:default_fg, s:default_bg, s:bold)
 call s:hi('NeomakeMessage')
 call s:hi('NeomakeWarning', s:yellow)
+
+" override to disable colors
+set t_Co=0
+
